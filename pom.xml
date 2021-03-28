@@ -71,7 +71,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.1.2.RELEASE</version>
                 <configuration>
-                    <mainClass></mainClass>
+                    <mainClass>com.ruyuan.little.project.rocketmq.LittleProjectRocketMqApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
