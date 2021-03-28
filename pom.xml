@@ -9,7 +9,38 @@
     <version>1.0-SNAPSHOT</version>
     <description>小实战项目</description>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
+    </properties>
 
+    <!--私服地址-->
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>public</name>
+            <url>http://121.4.45.211:8081/repository/maven-public/</url>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 
+    <dependencies>
+        <!--实战项目的公共依赖,需要在maven中引入仓库，见settings的repository-->
+        <dependency>
+            <groupId>com.ruyuan2020.little.project</groupId>
+            <artifactId>little-project-common</artifactId>
+            <version>1.0.0-RELEASE</version>
+        </dependency>
 
+        <!--RocketMQ Client依赖项-->
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-client</artifactId>
+            <version>4.7.0</version>
+        </dependency>
+    </dependencies>
 </project>
